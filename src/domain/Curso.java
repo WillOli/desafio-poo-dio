@@ -1,9 +1,13 @@
 package domain;
 
-public class Curso {
+public class Curso extends Conteudo {
     private String titulo;
     private String descricao;
     private int cargaHoria;
+    @Override
+    public double calcularXP() {
+        return XP_PADRAO * cargaHoria;
+    }
 
     public Curso() {
 
@@ -36,8 +40,8 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoria=" + cargaHoria +
                 '}';
     }
