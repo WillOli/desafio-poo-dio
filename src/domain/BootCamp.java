@@ -1,10 +1,7 @@
 package domain;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class BootCamp {
 
@@ -12,8 +9,9 @@ public class BootCamp {
     private String descricao;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays((45));
-    private Set<Dev> devsInscritos = new HashSet<>();
-    private Set<Conteudo> conteudos = new LinkedHashSet<>();
+    private Set<Dev> conteudosInscritos = new HashSet<>();
+    private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
 
     public String getNome() {
         return nome;
@@ -40,19 +38,19 @@ public class BootCamp {
     }
 
     public Set<Dev> getDevsInscritos() {
-        return devsInscritos;
+        return conteudosInscritos;
     }
 
-    public void setDevsInscritos(Set<Dev> devsInscritos) {
-        this.devsInscritos = devsInscritos;
+    public void setDevsInscritos(Set<Dev> conteudosInscritos) {
+        this.conteudosInscritos = conteudosInscritos;
     }
 
     public Set<Conteudo> getConteudos() {
-        return conteudos;
+        return conteudosConcluidos;
     }
 
-    public void setConteudos(Set<Conteudo> conteudos) {
-        this.conteudos = conteudos;
+    public void setConteudos(Set<Conteudo> conteudosConcluidos) {
+        this.conteudosConcluidos = conteudosConcluidos;
     }
 
     @Override
