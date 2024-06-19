@@ -57,5 +57,16 @@ public class Main {
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
         System.out.println("XP:" + devJoao.calcularTotalXp());
 
+        System.out.println("-------");
+        //criar um novo curso
+        Curso curso3 = new Curso();
+        curso3.setTitulo("Curso de Python");
+        curso3.setDescricao("Curso básico de Python");
+        curso3.setCargaHoria(6);
+        //printar o curso
+        System.out.println(curso3);
+
+
+
     }
 }
